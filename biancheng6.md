@@ -16,18 +16,18 @@
     输入: [7,8,9,11,12]
     输出: 1
 代码：
-int firstMissingPositive(int* nums, int numsSize){
-    int i;
-    int *B = (int*)malloc(sizeof(int)*(numsSize+1));//标记数组
-    memset(B,0,sizeof(int)*(numsSize+1));//赋初值为0
-    for(i = 0;i<numsSize;i++){
-        if(nums[i]>0 && nums[i]<=numsSize){
-            B[nums[i]]=1;//若nums[i]的值介于1~numsSize，则标记数组
-        }
-    }
-    //遍历数组
-    for(i=1;i<=numsSize;i++){
-        if(B[i]==0) break;
-    }
-    return i;
-}
+    int firstMissingPositive(int* nums, int numsSize){
+         int i;
+         int *B = (int*)malloc(sizeof(int)*(numsSize+1));//标记数组
+         memset(B,0,sizeof(int)*(numsSize+1));//赋初值为0
+         for(i = 0;i<numsSize;i++){
+              if(nums[i]>0 && nums[i]<=numsSize){
+                   B[nums[i]]=1;//若nums[i]的值介于1~numsSize，则标记数组
+         }
+      }
+          //遍历数组
+         for(i=1;i<=numsSize;i++){
+             if(B[i]==0) break;
+      }
+          return i;
+      }
