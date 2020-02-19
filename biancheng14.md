@@ -23,10 +23,10 @@
       
 
 
-代码：
+* 代码：
 
 
-
+```
     int sample[3][2] = {{-1,0},{-1,-1},{-1,1}};
     bool temp[100][100];
     bool judge_1(int i,int j,int dx,int dy,int n)
@@ -84,6 +84,6 @@
          solveNQueens(n,&returnSize);
          return returnSize;
     }
-
+```
 
    
